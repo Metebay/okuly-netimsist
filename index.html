@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Öğrenci Yönetim Sistemi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login Paneli -->
+  <div id="login-panel">
+    <h2>Giriş Yap</h2>
+    <input type="text" id="username" placeholder="Kullanıcı Adı">
+    <input type="password" id="password" placeholder="Şifre">
+    <button id="login-button">Giriş Yap</button>
+  </div>
+
+  <!-- Ana Panel -->
+  <div id="main-panel" style="display: none;">
+    <div id="sidebar">
+      <button class="menu-button" data-section="ogrenci-ekleme">Öğrenci Ekle</button>
+      <button class="menu-button" data-section="ogrenci-listesi">Öğrenci Listesi</button>
+      <button class="menu-button" data-section="sinif-olusturma">Sınıf Oluştur</button>
+      <button class="menu-button" data-section="siniflar">Sınıflar</button>
+      <button class="menu-button" data-section="yoklama">Yoklama</button>
+      <button class="menu-button" data-section="yoklama-kayitlari">Yoklama Kayıtları</button>
+    </div>
+    <div id="content">
+      <!-- İçerikler -->
+      <div id="ogrenci-ekleme" class="section" style="display: none;">
+        <h2>Öğrenci Ekle</h2>
+        <input type="text" id="ogrenci-ad" placeholder="Ad Soyad">
+        <select id="sinif-sec">
+          <option value="">Sınıf Seç</option>
+        </select>
+        <button id="ogrenci-ekle-button">Öğrenci Ekle</button>
+      </div>
+
+      <div id="ogrenci-listesi" class="section" style="display: none;">
+        <h2>Öğrenci Listesi</h2>
+        <ul id="ogrenci-list"></ul>
+      </div>
+
+      <div id="sinif-olusturma" class="section" style="display: none;">
+        <h2>Sınıf Oluştur</h2>
+        <input type="text" id="sinif-ad" placeholder="Sınıf Adı">
+        <button id="sinif-olustur-button">Sınıf Oluştur</button>
+      </div>
+
+      <div id="siniflar" class="section" style="display: none;">
+        <h2>Sınıflar</h2>
+        <ul id="sinif-list"></ul>
+      </div>
+
+      <div id="yoklama" class="section" style="display: none;">
+        <h2>Yoklama</h2>
+        <select id="yoklama-sinif-sec">
+          <option value="">Sınıf Seç</option>
+        </select>
+        <div id="yoklama-list"></div>
+        <button id="yoklama-kaydet-button">Yoklamayı Kaydet</button>
+      </div>
+      
+      <div id="yoklama-kayitlari" class="section" style="display: none;">
+        <h2>Yoklama Kayıtları</h2>
+        <ul id="yoklama-kayit-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
